@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List plus LocalStorage</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+     <main class="app">
+        <section class="greeting">
+            <h2 class="title">
+                Ini adalah catatan tugas dari <input type="text" id="Nama" placeholder="Tuliskan Namamu">
+            </h2>
+        </section>
+        <section class="create-todo">
+            <h3>BUAT LIST TUGASMU DISINI</h3>
+
+            <form id="new-todo-form">
+                <h4>Jadi apa tugas mu?</h4>
+                <input 
+                    type="text" 
+                    name="content" 
+                    id="content" 
+                    placeholder="ketik disini" />
+
+                    <h4>pilih jenis apa</h4>
+                <div class="options">
+                    <label>
+                        <input 
+                            type="radio" 
+                            name="category" 
+                            id="category1" 
+                            value="business" />
+                        <span class="bubble business"></span>
+                        <div>Harus</div>
+                    </label>
+
+                    <label>
+                        <input 
+                            type="radio" 
+                            name="category" 
+                            id="category2" 
+                            value="personal" />
+                        <span class="bubble personal"></span>
+                        <div>Pengingat</div>
+                    </label>
+
+                    </div>
+
+                    <input type="submit" value="Tambah"/>
+            </form>
+        </section>
+
+        <section class="todo-list done">
+            <h3>LIST TUGASMU</h3>
+            <div class="list" id="todo-list">
+                <div class="todo-item">
+                    <label>
+                        <input type="checkbox"/>
+                        <span class="bubble business"></span>
+                    </label>
+
+                    <div class="todo-content">
+                        <input type="text" value="" readonly />
+                    </div>
+
+                    <div class="actions">
+                        <button class="edit">Edit</button>
+                        <button class="delete">Hapus</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="todo-item">
+                <label>
+                    <input type="checkbox"/>
+                    <span class="bubble personal"></span>
+                </label>
+
+                <div class="todo-content">
+                    <input type="text" value="" readonly />
+                </div>
+
+                <div class="actions">
+                    <button class="edit">Edit</button>
+                    <button class="delete">Hapus</button>
+                </div>
+            </div>
+
+            <div class="mode-switch">
+                <label class="switch">
+                    <input type="checkbox" id="mode-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span id="mode-label">Light Mode</span>
+            </div>
+        </div>
+        </section>
+
+     </main>
+    <script src="main.js"></script>
+</body>
+</html>
+</html>
