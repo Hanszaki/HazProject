@@ -31,6 +31,7 @@ input:not([type="radio"]):not([type="checkbox"]), button {
     cursor: initial;
 }
 
+
 body {
     background: var(--light);
     color: var(--dark);
@@ -86,17 +87,20 @@ h4 {
     font-weight: 700;
 }
 
-.create-todo input[type="text"]{
+.create-todo input[type="text"] {
     display: block;
     width: 100%;
     font-size: 1.125rem;
     padding: 1rem 1.5rem;
     color: var(--dark);
     background-color: #fff;
-    border-radius: o.5rem;
+    border-radius: 0.5rem;
     box-shadow: var(--shadow);
     margin-bottom: 1.5rem;
+    overflow-wrap: break-word; /* Teks akan pindah ke bawah jika terlalu panjang */
 }
+
+
 
 .create-todo .options{
     display: grid;
@@ -225,13 +229,20 @@ input:checked ~ .bubble::after{
 
 .todo-item .todo-content{
     flex: 1 1 0%;
+    overflow: hidden;
 }
 
-.todo-item .todo-content input{
+.todo-item .todo-content input {
     color: var(--dark);
     font-size: 1.125rem;
-    font-weight: bold; 
+    font-weight: bold;
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    overflow: auto; /* Mengizinkan teks untuk memindah ke bawah jika terlalu panjang */
 }
+
+
 
 .todo-item .actions{
     display: flex;
