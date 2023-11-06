@@ -51,6 +51,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+    const namaInput = document.getElementById("Nama");
+    const savedNama = localStorage.getItem("Nama");
+
+    if (savedNama) {
+        namaInput.value = savedNama;
+    }
+
+    namaInput.addEventListener("input", function () {
+        localStorage.setItem("Nama", namaInput.value);
+    });
+
+
     const modeToggle = document.getElementById("mode-toggle");
     const modeLabel = document.getElementById("mode-label");
 
